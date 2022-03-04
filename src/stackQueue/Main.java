@@ -4,27 +4,26 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * creating Object an Oject and Calling method to push value to stack calling 
-		 * method to display value of stack
+		 * creating Object 
+		 * Calling method to add value at first
+		 * calling method to display value of queue
 		 */
-
+		
 		/*
 		 * creating Object an Oject
 		 */
-		Node stack = new Node();
+		Queue queue = new Queue();
 		/*
-		 * Calling method to push value to stack
+		 *Calling method to add
 		 */
-		stack.push(70);
-		stack.push(30);
-		stack.push(56);
+			queue.enque(56);
+			queue.enque(30);
+			queue.enque(70);
+			
 		/*
 		 * calling method to display value of stack
 		 */
-		stack.displayStack();
-		stack.pop();
-		stack.displayStack();
-		
+		queue.displayQueue();
 	}
 
 }

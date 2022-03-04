@@ -1,6 +1,6 @@
 package stackQueue;
 
-public class Node {
+public class Queue {
 	/*
 	 * creating Object
 	 */
@@ -9,21 +9,22 @@ public class Node {
 	/*
 	 * calling method through object
 	 */
-	public void push(Object data) {
-		List.addFirst(data);
+	public void enque(Object data) {
+		List.addLast(data);
+		displayQueue();
 	}
 
 	/*
-	 * calling method to display value in linkedList/stack
+	 * calling method to display value in linkedList/Queue
 	 */
-	public void displayStack() {
+	public void displayQueue() {
 			List.display();
 	}
 	/*
 	 * deleting top value in the stack till stack gets empty
 	 */
-	public void pop() {
-		while (List.head != null)
+	public void deque() {
 			List.deleteFirst();
+			displayQueue();
 	}
 }

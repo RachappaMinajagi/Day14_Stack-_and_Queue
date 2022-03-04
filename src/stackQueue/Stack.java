@@ -11,38 +11,51 @@ public class Stack {
 			this.data = data;
 		}
 	}
-	/*
-	 * addFirst - To add the elements in stack
-	 * display - To print the output 
+	/** Process
+	 *  ==============
+	 * 
+	 * 1.addLast - To add the elements in queue at first 
+	 * 2. deleteFirst - To delete the first value of satck till it gets empty.
+	 * 3. display - To print the output 
 	 */
 
+	
 	/*
-	 * Method to add elements
+	 * 1.creating method to add the last value to stack
 	 */
-	public void addFirst(Object data) {
+
+	public void addLast(Object data) {
 		Node newNode = new Node(data);
-		if (head == null) {
+		if (head == null)
 			head = newNode;
-		} else {
-			newNode.next = head;
-			head = newNode;
+		else if (head.next == null)
+			head.next = newNode;
+		else {
+			Node temp = head;
+			while (temp.next != null) {
+				temp = temp.next;
+			}
+			temp.next = newNode;
 		}
 	}
-	
+
+	/*
+	 * 2.method to delete first value till the stack gets empty
+	 */
 	public void deleteFirst() {
 		if (head == null)
 			System.out.println("No Elements present to delete");
 		else
-			System.out.println("Pop values");
+			System.out.println("Pop value");
 		head = head.next;
 	}
-
+	
 	/*
-	 * Method Displaying num of elements
+	 *3. Method to Print OutPut
 	 */
 	public void display() {
 		if (head == null) {
-			System.out.println("No Elements to display");
+			System.out.println("No elements to display");
 		} else {
 			Node temp = head;
 			while (temp.next != null) {
