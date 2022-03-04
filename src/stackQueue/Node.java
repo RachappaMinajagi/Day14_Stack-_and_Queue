@@ -19,4 +19,11 @@ public class Node {
 	public void displayStack() {
 			List.display();
 	}
+	/*
+	 * deleting top value in the stack till stack gets empty
+	 */
+	public void pop() {
+		while (List.head != null)
+			List.deleteFirst();
+	}
 }

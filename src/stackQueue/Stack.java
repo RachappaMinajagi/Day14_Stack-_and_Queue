@@ -28,17 +28,25 @@ public class Stack {
 			head = newNode;
 		}
 	}
+	
+	public void deleteFirst() {
+		if (head == null)
+			System.out.println("No Elements present to delete");
+		else
+			System.out.println("Pop values");
+		head = head.next;
+	}
 
 	/*
-	 * Method to Displaying num of elements
+	 * Method Displaying num of elements
 	 */
 	public void display() {
 		if (head == null) {
-			System.out.println("No elements to display");
+			System.out.println("No Elements to display");
 		} else {
 			Node temp = head;
 			while (temp.next != null) {
-				System.out.print(temp.data + " -> ");
+				System.out.print(temp.data + " , ");
 				temp = temp.next;
 			}
 			System.out.println(temp.data);

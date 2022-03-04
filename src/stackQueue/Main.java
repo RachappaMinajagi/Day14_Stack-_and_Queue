@@ -22,7 +22,9 @@ public class Main {
 		 * calling method to display value of stack
 		 */
 		stack.displayStack();
-
+		stack.pop();
+		stack.displayStack();
+		
 	}
 
 }
