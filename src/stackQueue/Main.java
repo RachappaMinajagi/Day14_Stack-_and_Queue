@@ -24,6 +24,14 @@ public class Main {
 		 * calling method to display value of stack
 		 */
 		queue.displayQueue();
+		
+		/*
+		 * Deleting the values of the Stack 56,30,70
+		 * then Stack is empty
+		 */
+		queue.deque();
+		queue.deque();
+		queue.deque();
 	}
 
 }
